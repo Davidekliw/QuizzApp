@@ -8,10 +8,55 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
 </head>
 
-<body>
+<body onload="init()">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Quizz App</a>
+        </div>
+    </nav>
 
+    <div class="container">
+        <div class="card quiz-card">
+            <img src="./img/school.jpg" class="card-img-top" alt="Hintergrundbild mit Stiften">
+            <div class="card-body">
+                <h5 class="card-title" id="question">Card title</h5>
+                <div class="card mb-2">
+                    <div class="card-body" id="answer_1">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                  <div class="card mb-2">
+                    <div class="card-body" id="answer_2">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                  <div class="card mb-2">
+                    <div class="card-body"  id="answer_3">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                  <div class="card mb-2">
+                    <div class="card-body"  id="answer_4">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+                <div class="quiz-footer">
+                    <div><b>1</b> von <b id="question_counter">5</b></div>
+                    <button class="btn btn-primary">nächste Frage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    show_question();
 </body>
 
 </html>
