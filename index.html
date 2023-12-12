@@ -18,45 +18,52 @@
 </head>
 
 <body onload="init()">
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Quizz App</a>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="container">
         <div class="card quiz-card">
-            <img src="./img/school.jpg" class="card-img-top" alt="Hintergrundbild mit Stiften">
-            <div class="card-body">
+            <img src="./img/school.jpg" class="card-img-top" id="header-img" alt="Hintergrundbild mit Stiften">
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+              </div>
+            <div class="card-body d-none" id="endscreen-body">
+                <div  class="text-center final-headline">Quiz beendet!</div>
+                <div  class="text-center mb-3">Du hast <b id="right_answers">XXX</b> von <b id="final-questions">XXX</b> Fragen richtig beantwortet.</div>
+                <div class="center_v_h"><button class="btn btn-primary" id="restart-button" onclick="restartGame()">Erneut Spielen</button></div>
+            </div>
+            <div class="card-body" id="question-body">
                 <h5 class="card-title" id="question">Card title</h5>
-                <div class="card mb-2">
-                    <div class="card-body" id="answer_1">
-                      This is some text within a card body.
+                <div class="card mb-2" onclick="answer('answer_1')">
+                    <div class="card-body quiz-answer-card" id="answer_1">
+                        This is some text within a card body.
                     </div>
-                  </div>
-                  <div class="card mb-2">
-                    <div class="card-body" id="answer_2">
-                      This is some text within a card body.
+                </div>
+                <div class="card mb-2" onclick="answer('answer_2')">
+                    <div class="card-body quiz-answer-card" id="answer_2">
+                        This is some text within a card body.
                     </div>
-                  </div>
-                  <div class="card mb-2">
-                    <div class="card-body"  id="answer_3">
-                      This is some text within a card body.
+                </div>
+                <div class="card mb-2" onclick="answer('answer_3')">
+                    <div class="card-body quiz-answer-card" id="answer_3">
+                        This is some text within a card body.
                     </div>
-                  </div>
-                  <div class="card mb-2">
-                    <div class="card-body"  id="answer_4">
-                      This is some text within a card body.
+                </div>
+                <div class="card mb-2" onclick="answer('answer_4')">
+                    <div class="card-body quiz-answer-card" id="answer_4">
+                        This is some text within a card body.
                     </div>
-                  </div>
-                <div class="quiz-footer">
-                    <div><b>1</b> von <b id="question_counter">5</b></div>
-                    <button class="btn btn-primary">nächste Frage</button>
+                </div>
+                <div class="quiz-footer" id="quiz-footer">
+                    <div><b id="current-counter">1</b> von <b id="question_counter">5</b></div>
+                    <button onclick="nextQuestion()" class="btn btn-primary" disabled id="next-button">nächste Frage</button>
                 </div>
             </div>
         </div>
     </div>
-    show_question();
 </body>
 
 </html>

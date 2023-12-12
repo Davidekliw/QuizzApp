@@ -20,3 +20,31 @@ body{
 .quiz-card{
     width: 30rem;
 }
+
+.quiz-answer-card:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-success, .bg-danger{
+    color: white !important;
+}
+
+.d-none{
+    display: none;
+}
+
+.pic{
+    width: 100%;
+}
+
+.final-headline{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.center_v_h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
